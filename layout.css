@@ -4,7 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*****************/
+/***************************/
 
 img {
   width: 100%;
@@ -13,10 +13,34 @@ img {
 }
 
 /** forside **/
-
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+/** projekter **/
+.galleri {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.item {
+  position: relative;
+  /* text-decoration: none; */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+.item_nummer {
+  position: absolute;
+  top: 88%;
+  left: 85%;
 }
 
 /** footer **/
@@ -39,6 +63,13 @@ img {
 }
 
 @media (min-width: 600px) {
+  /**projekter**/
+  .galleri {
+    gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 12rem;
+  }
+
   /** footer **/
   .grid_1-1-1 {
     display: grid;
@@ -54,5 +85,13 @@ img {
   .kontakt {
     grid-column: 3;
     grid-row: 3;
+  }
+}
+
+/**mediaq til store skærme**/
+@media (min-width: 1200px) {
+  /**projekter**/
+  .galleri {
+    gap: 6rem;
   }
 }
