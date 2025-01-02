@@ -7,18 +7,169 @@
 /***************************/
 
 img {
-  width: 100%;
-  height: auto;
   display: block;
 }
 
-/**generelt**/
 /**menu**/
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  transition: color 0.3s;
+  text-align: end;
+}
+
+.burger .line {
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+}
+
+/**generelt**/
+main {
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+}
+
+.margin {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 19vw, 19rem);
+  text-align: center;
+  white-space: nowrap;
+  position: relative; /*For at kunne placere footer h2*/
+  overflow: visible;
+}
+
+.marginh1 {
+  margin-top: 9rem;
+}
+
+.h2_relativt {
+  position: absolute;
+  bottom: 2.6em;
+  transform: translateX(-279.4%); /*her er % af elementets egen bredte */
+}
+
+/* .pseudo_p {
+  position: relative;
+}
+
+.pseudo_p::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 7em;
+  position: absolute;
+  left: 0.1em;
+  top: 0;
+} */
+
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 7rem;
+  margin-top: 1rem;
+}
 
 /** forside **/
+.cirkel {
+  width: 11%;
+  height: auto;
+  position: sticky;
+  top: 19.9rem;
+  left: 2rem;
+  z-index: 1000;
+  /* display: none; */
+}
+
 .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.CTA {
+  margin-bottom: 14rem;
+  margin-top: 1rem;
 }
 
 /** projekter **/
@@ -47,6 +198,21 @@ img {
 }
 
 /** footer **/
+footer {
+  padding-top: 4rem;
+}
+
+.footer_h2 {
+  position: absolute;
+  bottom: -0.4em;
+  transform: translateX(-235%);
+}
+
+.SoMe {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .grid_1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -66,7 +232,32 @@ img {
 }
 
 @media (min-width: 600px) {
+  /**generelt**/
+  h3 {
+    margin-top: -5rem;
+  }
+
+  /** forside **/
+  .marginh1 {
+    margin-top: 1rem;
+  }
+
+  .CTA {
+    margin-bottom: 9rem;
+    margin-top: 1rem;
+  }
+
+  .cirkel {
+    top: 27.9rem;
+    left: 7rem;
+  }
+
   /**projekter**/
+  .margin {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
   .galleri {
     gap: 4rem;
     margin-top: 2rem;
@@ -74,6 +265,10 @@ img {
   }
 
   /** footer **/
+  footer {
+    padding-top: 2rem;
+  }
+
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -89,6 +284,10 @@ img {
     grid-column: 3;
     grid-row: 3;
   }
+
+  .SoMe {
+    gap: 1rem;
+  }
 }
 
 /**mediaq til store skærme**/
@@ -96,5 +295,10 @@ img {
   /**projekter**/
   .galleri {
     gap: 6rem;
+  }
+
+  .margin {
+    margin-left: 12rem;
+    margin-right: 12rem;
   }
 }
