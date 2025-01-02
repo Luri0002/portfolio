@@ -1,0 +1,58 @@
+/********** reset **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*****************/
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/** forside **/
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/** footer **/
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin-top: 6rem;
+  padding-bottom: 8.5rem;
+}
+
+.footer_punkter {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.kontakt {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+@media (min-width: 600px) {
+  /** footer **/
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .footer_punkter {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .kontakt {
+    grid-column: 3;
+    grid-row: 3;
+  }
+}

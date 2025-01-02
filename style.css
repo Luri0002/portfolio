@@ -1,3 +1,17 @@
+/********** reset **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*****************/
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /*** css variabler ***/
 :root {
   /**farver**/
@@ -16,14 +30,14 @@
   --h3mobil: 1.5rem;
   --h3desktop: 1.75rem;
 
-  --h4mobil: 1.2rem;
-  --h4desktop: 1.5rem;
+  /* --h4mobil: 1.2rem;
+  --h4desktop: 1.5rem; */
 
-  --pmobil: 0.9375rem;
-  --pdesktop: 1.2rem;
+  --pmobil: 1.1rem;
+  --pdesktop: 1.5rem;
 
-  --minitekstmobil: 0.8125rem;
-  --minitekstdesktop: 0.875rem;
+  --minitekstmobil: 1rem;
+  --minitekstdesktop: 1.1rem;
 
   /*** space ***/
   --space-xxs: 0.25rem;
@@ -114,11 +128,10 @@ nav {
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
-  /* font-family: Arial, Helvetica, sans-serif; */
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: var(--minitekstdesktop);
+  font-size: var(--pmobil);
 }
 
 .menu a:hover {
@@ -185,7 +198,7 @@ nav {
   }
 
   nav.active .menu a {
-    font-size: 0.8rem;
+    font-size: var(--pmobil);
   }
 
   .logo img {
@@ -194,4 +207,188 @@ nav {
   }
 }
 
+/** generelt **/
+
+main {
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+}
+
+body {
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--primary);
+  font-size: clamp(3rem, 19vw, 19rem);
+  text-align: center;
+  white-space: nowrap;
+  position: relative; /*For at kunne placere footer h2*/
+  overflow: visible;
+}
+
+.marginh1 {
+  margin-top: 9rem;
+}
+
+.h2_relativt {
+  font-size: 0.35em;
+  color: var(--secondary);
+  position: absolute;
+  bottom: 2.6em;
+  transform: translateX(-279.4%); /*her er % af elementets egen bredte */
+}
+
+/* .pseudo_p {
+  position: relative;
+}
+
+.pseudo_p::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 7em;
+  background-color: var(--accent);
+  position: absolute;
+  left: 0.1em;
+  top: 0;
+} */
+
+h3 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--primary);
+  font-size: var(--h3mobil);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--primary);
+  margin-bottom: 7rem;
+  margin-top: 1rem;
+  font-size: var(--pmobil);
+}
+
+.white {
+  color: var(--white);
+}
+
+/** forside **/
+.accent {
+  color: var(--accent);
+}
+
+.cirkel {
+  width: 11%;
+  height: auto;
+  position: sticky;
+  top: 19.9rem;
+  left: 2rem;
+  z-index: 1000;
+  /* display: none; */
+}
+
+.CTA {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--primary);
+  margin-bottom: 14rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: var(--minitekstmobil);
+}
+
+/** footer **/
+
+footer {
+  background-color: var(--primary);
+  padding-top: 4rem;
+}
+
+.footer_h2 {
+  font-size: 0.35em;
+  position: absolute;
+  bottom: -0.4em;
+  transform: translateX(-235%);
+}
+
+.footer_punkter {
+  list-style: none;
+}
+
+.footer_punkter a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--pmobil);
+}
+
+.footer_punkter a:hover {
+  color: var(--accent);
+  font-weight: bold;
+  text-decoration: underline; /** line-through ? **/
+  text-decoration-thickness: 2px;
+}
+
+.SoMe {
+  display: flex;
+  width: 125px;
+  height: auto;
+  gap: 0.5rem;
+}
+
 /****/
+
+@media (min-width: 600px) {
+  /**generelt**/
+  h3 {
+    font-size: var(--h3desktop);
+  }
+
+  p {
+    font-size: var(--pdesktop);
+  }
+
+  /** forside **/
+  .marginh1 {
+    margin-top: 1rem;
+  }
+
+  .CTA {
+    margin-bottom: 9rem;
+    margin-top: 1rem;
+    font-size: var(--pdesktop);
+  }
+
+  .cirkel {
+    top: 27.9rem;
+    left: 7rem;
+  }
+
+  /**footer**/
+  footer {
+    padding-top: 2rem;
+  }
+
+  .footer_punkter a {
+    font-size: var(--pdesktop);
+  }
+
+  .SoMe {
+    width: 213px;
+    height: auto;
+    gap: 1rem;
+  }
+}
