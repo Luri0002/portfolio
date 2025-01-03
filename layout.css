@@ -105,9 +105,9 @@ main {
   margin-right: 0.9rem;
 }
 
-.margin {
-  margin-left: 3.5rem;
-  margin-right: 3.5rem;
+.margin_ekstra {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 h1 {
@@ -142,22 +142,22 @@ h1 {
   top: 0;
 } */
 
-h4 {
+/* h4 {
   margin-bottom: 0.5rem;
-}
+} */
 
-p {
+/* p {
   margin-bottom: 7rem;
   margin-top: 1rem;
-}
+} */
 
 /** forside **/
 .cirkel {
   width: 11%;
   height: auto;
   position: sticky;
-  top: 19.9rem;
-  left: 2rem;
+  top: 46%;
+  left: 8%;
   z-index: 1000;
   /* display: none; */
 }
@@ -173,6 +173,11 @@ p {
 }
 
 /** projekter **/
+.margin_projekter {
+  margin-left: 3.5rem;
+  margin-right: 3.5rem;
+}
+
 .galleri {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -196,6 +201,110 @@ p {
   top: 88%;
   left: 85%;
 }
+
+/** om mig **/
+/**grid**/
+.grid_9 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto auto auto; /** så store som indholdet**/
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.portraert {
+  grid-column: 5 / span 6;
+  grid-row: 1;
+  margin-bottom: 2rem;
+  max-width: 300px; /** for at det ikke bliver for stort**/
+  height: auto;
+  justify-self: center; /**når det ikke følger med kolonnerne længere **/
+}
+
+.lottie {
+  grid-column: 3 / span 8;
+  grid-row: 2;
+}
+
+.underoverskrift {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+}
+
+.tekst {
+  grid-column: 3 / span 8;
+  grid-row: 4;
+  margin-bottom: 2rem;
+}
+
+.style {
+  grid-column: 3 / span 8;
+  grid-row: 5;
+}
+
+.kompetencer {
+  grid-column: 3 / span 8;
+  grid-row: 6;
+  margin-top: 0;
+}
+/******/
+
+.margin_bottom {
+  margin-bottom: 2rem;
+}
+
+/**baggrunds diagram**/
+.style {
+  margin-bottom: 7rem;
+}
+
+.tidslinje {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.lodret_linje {
+  position: absolute;
+  left: 87px;
+  top: -18px;
+}
+
+.event {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.year {
+  margin-right: 10px;
+}
+
+.linje {
+  margin-right: 10px;
+}
+/******/
+/**kompetence diagram**/
+.kompetencer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 7rem;
+}
+
+.kompetence {
+  display: flex;
+  align-items: center;
+}
+
+.kompetence p {
+  width: 215px;
+}
+
+.prikker {
+  width: 150px;
+  height: auto;
+}
+/******/
 
 /** footer **/
 footer {
@@ -231,10 +340,24 @@ footer {
   grid-row: 3;
 }
 
+/**media specifik til cirkel**/
+@media (min-width: 600px) and (max-width: 750px) {
+  .cirkel {
+    top: 35% !important; /**mellem queryen overskrev**/
+    left: 8% !important;
+  }
+}
+/****************************/
+
 @media (min-width: 600px) {
   /**generelt**/
   h3 {
     margin-top: -5rem;
+  }
+
+  .margin_ekstra {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
 
   /** forside **/
@@ -248,12 +371,12 @@ footer {
   }
 
   .cirkel {
-    top: 27.9rem;
-    left: 7rem;
+    top: 45%;
+    left: 8%;
   }
 
   /**projekter**/
-  .margin {
+  .margin_projekter {
     margin-left: 6rem;
     margin-right: 6rem;
   }
@@ -263,6 +386,65 @@ footer {
     margin-top: 2rem;
     margin-bottom: 12rem;
   }
+
+  /** om mig **/
+  /**grid**/
+  .grid_9 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto auto auto; /** så store som indholdet**/
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .portraert {
+    grid-column: 7 / span 4;
+    grid-row: 1;
+    margin-bottom: 0;
+    justify-self: end;
+  }
+
+  .lottie {
+    grid-column: 3 / span 4;
+    grid-row: 1;
+  }
+
+  .underoverskrift {
+    grid-column: 3 / span 4;
+    grid-row: 2;
+  }
+
+  .tekst {
+    grid-column: 4 / span 6;
+    grid-row: 3;
+    /* margin-bottom: 2rem; */
+  }
+
+  .style {
+    grid-column: 3 / span 6;
+    grid-row: 5;
+  }
+
+  .kompetencer {
+    grid-column: 6 / span 6;
+    grid-row: 6;
+    margin-top: 0;
+  }
+  /******/
+  /**baggrunds diagram**/
+  .style {
+    margin-bottom: 10rem;
+  }
+
+  .tidslinje {
+    margin-top: 4rem;
+  }
+
+  .lodret_linje {
+    left: 111px;
+    top: -34px;
+  }
+  /******/
 
   /** footer **/
   footer {
@@ -292,13 +474,30 @@ footer {
 
 /**mediaq til store skærme**/
 @media (min-width: 1200px) {
+  /**forside**/
+  .cirkel {
+    top: 60%;
+    left: 8%;
+  }
+
   /**projekter**/
   .galleri {
     gap: 6rem;
   }
 
-  .margin {
+  .margin_projekter {
     margin-left: 12rem;
     margin-right: 12rem;
+  }
+
+  /**om mig**/
+  .margin_ekstra {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  .lottie {
+    scale: 1.2;
+    align-self: center; /**centrere til portræt**/
   }
 }

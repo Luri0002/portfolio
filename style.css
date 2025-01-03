@@ -16,8 +16,8 @@
   --h3mobil: 2.5rem;
   --h3desktop: 5rem;
 
-  --h4mobil: 1.2rem;
-  --h4desktop: 1.5rem;
+  --h4mobil: 1.8rem;
+  --h4desktop: 3rem;
 
   --pmobil: 1.1rem;
   --pdesktop: 1.5rem;
@@ -169,11 +169,15 @@ p {
   color: var(--white);
 }
 
-/** forside **/
 .accent {
   color: var(--accent);
 }
 
+#accent {
+  background-color: var(--accent);
+}
+
+/** forside **/
 .CTA {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -202,6 +206,29 @@ p {
   transform: scale(1.1);
   transition: 0.5s;
 }
+
+/****** om mig ********/
+/**baggrunds diagram**/
+.style {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--pmobil);
+  color: var(--primary);
+}
+
+.lodret_linje {
+  width: 2px;
+  height: 168%;
+  background-color: var(--primary);
+}
+
+.linje {
+  width: 64px;
+  height: 2px;
+  background-color: var(--primary);
+}
+/********/
 
 /** footer **/
 
@@ -233,6 +260,10 @@ footer {
   text-decoration-thickness: 2px;
 }
 
+.footer_h4 {
+  font-size: var(--pmobil);
+}
+
 .SoMe {
   width: 125px;
   height: auto;
@@ -259,8 +290,29 @@ footer {
     font-size: var(--pdesktop);
   }
 
+  /****** om mig ********/
+  /**baggrunds diagram**/
+  .style {
+    font-size: var(--pdesktop);
+  }
+
+  .lodret_linje {
+    width: 3px;
+    height: 189%;
+  }
+
+  .linje {
+    width: 176px;
+    height: 3px;
+  }
+  /********/
+
   /**footer**/
   .footer_punkter a {
+    font-size: var(--pdesktop);
+  }
+
+  .footer_h4 {
     font-size: var(--pdesktop);
   }
 
