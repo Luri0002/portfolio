@@ -202,16 +202,16 @@ h1 {
   left: 85%;
 }
 
-/** om mig **/
-/**grid**/
+/*********************fælles grid**********************/
 .grid_9 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: auto auto auto; /** så store som indholdet**/
+  grid-auto-rows: auto; /** indholdets højde**/
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
-
+/*****************************************************/
+/**om mig**/
 .portraert {
   grid-column: 5 / span 6;
   grid-row: 1;
@@ -247,8 +247,156 @@ h1 {
   grid-row: 6;
   margin-top: 0;
 }
+/**temaside 1**/
+.underoverskrift1 {
+  grid-column: 2 / span 4;
+  grid-row: 1;
+  margin-top: 2rem;
+}
+
+.tekst1 {
+  grid-column: 3 / span 7;
+  grid-row: 2;
+  margin-bottom: 2rem;
+}
+
+.foto1 {
+  grid-column: 1 / span 10;
+  grid-row: 3;
+}
+
+.underoverskrift2 {
+  grid-column: 2 / span 4;
+  grid-row: 4;
+  margin-top: 3rem;
+}
+
+.tekst2 {
+  grid-column: 3 / span 7;
+  grid-row: 5;
+  margin-bottom: 2rem;
+}
+
+.foto_full2 {
+  grid-column: 1 / span 10;
+  grid-row: 6;
+}
+
+.underoverskrift3 {
+  grid-column: 2 / span 4;
+  grid-row: 7;
+  margin-top: 3rem;
+}
+
+.tekst3a {
+  grid-column: 3 / span 7;
+  grid-row: 8;
+  margin-bottom: 2rem;
+}
+
+.tekst3b {
+  grid-column: 3 / span 7;
+  grid-row: 9;
+  margin-bottom: 2rem;
+}
+
+.foto_full3 {
+  grid-column: 1 / span 10;
+  grid-row: 10;
+  margin: 0;
+}
+
+.underoverskrift4 {
+  grid-column: 2 / span 4;
+  grid-row: 11;
+  margin-top: 3rem;
+}
+
+.tekst4 {
+  grid-column: 3 / span 7;
+  grid-row: 12;
+  margin-bottom: 2rem;
+}
+
+.foto_full4 {
+  grid-column: 1 / span 10;
+  grid-row: 13;
+  margin: 0;
+}
+
+.underoverskrift5 {
+  grid-column: 2 / span 4;
+  grid-row: 14;
+  margin-top: 2rem;
+}
+
+.tekst5 {
+  grid-column: 3 / span 7;
+  grid-row: 15;
+  margin-bottom: 2rem;
+}
+
+.link1 {
+  grid-column: 2 / span 3;
+  grid-row: 16;
+}
+
+/**temaside 2**/
+.foto3 {
+  grid-column: 1 / span 10;
+  grid-row: 10;
+}
+
+/**temaside 4**/
+.tekst3_side4 {
+  grid-column: 3 / span 7;
+  grid-row: 8;
+  margin-bottom: 2rem;
+}
+
+.foto3_side4 {
+  grid-column: 1 / span 10;
+  grid-row: 9;
+}
+
+.underoverskrift4_side4 {
+  grid-column: 2 / span 4;
+  grid-row: 10;
+  margin-top: 3rem;
+}
+
+.tekst4_side4 {
+  grid-column: 3 / span 7;
+  grid-row: 11;
+  margin-bottom: 2rem;
+}
+
+.foto4_side4 {
+  grid-column: 1 / span 10;
+  grid-row: 12;
+  margin: 0;
+}
+
+.underoverskrift5_side4 {
+  grid-column: 2 / span 4;
+  grid-row: 13;
+  margin-top: 2rem;
+}
+
+.tekst5_side4 {
+  grid-column: 3 / span 7;
+  grid-row: 14;
+  margin-bottom: 2rem;
+}
+
+.link1_side4 {
+  grid-column: 2 / span 3;
+  grid-row: 15;
+}
+
 /******/
 
+/** om mig **/
 .margin_bottom {
   margin-bottom: 2rem;
 }
@@ -305,6 +453,12 @@ h1 {
   height: auto;
 }
 /******/
+/**tema 2**/
+.link1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 /** footer **/
 footer {
@@ -388,15 +542,16 @@ footer {
   }
 
   /** om mig **/
-  /**grid**/
+  /*********************fælles grid**********************/
   .grid_9 {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: auto auto auto; /** så store som indholdet**/
+    grid-auto-rows: auto;
     margin-top: 2rem;
     margin-bottom: 4rem;
   }
-
+  /*****************************************************/
+  /**om mig og lidt fælles**/
   .portraert {
     grid-column: 7 / span 4;
     grid-row: 1;
@@ -430,8 +585,10 @@ footer {
     grid-row: 6;
     margin-top: 0;
   }
+  /**temasiderne**/
+
   /******/
-  /**baggrunds diagram**/
+  /**baggrunds diagram (om mig)**/
   .style {
     margin-bottom: 10rem;
   }

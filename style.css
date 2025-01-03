@@ -229,6 +229,20 @@ p {
   background-color: var(--primary);
 }
 /********/
+/**tema 2**/
+.link1 {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--h4mobil);
+  color: var(--primary);
+  text-decoration: underline 3px;
+}
+
+.pil {
+  width: 2rem;
+  height: auto;
+}
 
 /** footer **/
 
