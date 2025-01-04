@@ -79,6 +79,7 @@ header {
   font-weight: 500;
   font-style: normal;
   font-size: var(--pmobil);
+  transition: 0.3s;
 }
 
 .menu a:hover {
@@ -204,7 +205,6 @@ p {
 .item:hover img {
   filter: none;
   transform: scale(1.1);
-  transition: 0.5s;
 }
 
 /****** om mig ********/
@@ -229,7 +229,7 @@ p {
   background-color: var(--primary);
 }
 /********/
-/**tema 2**/
+/**tema**/
 .link1 {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -237,13 +237,28 @@ p {
   font-size: var(--h4mobil);
   color: var(--primary);
   text-decoration: underline 3px;
+  transition: 0.5s;
+}
+
+.link1:hover {
+  color: var(--accent);
+}
+
+.link1:hover .pil {
+  transform: scale(1.2);
 }
 
 .pil {
   width: 2rem;
   height: auto;
+  transition: 0.5s;
 }
 
+/**tema5**/
+.h4_plus {
+  color: var(--accent);
+  font-size: 2rem;
+}
 /** footer **/
 
 footer {
@@ -265,6 +280,7 @@ footer {
   font-weight: 500;
   font-style: normal;
   font-size: var(--pmobil);
+  transition: 0.3s;
 }
 
 .footer_punkter a:hover {
@@ -284,6 +300,14 @@ footer {
 }
 
 /****/
+
+/**media specifik til cirkel & h3**/
+@media (min-width: 600px) and (max-width: 750px) {
+  h3 {
+    font-size: 3.5rem !important; /**mellem queryen overskrev**/
+  }
+}
+/****************************/
 
 @media (min-width: 600px) {
   /**generelt**/
@@ -320,6 +344,21 @@ footer {
     height: 3px;
   }
   /********/
+  /**tema**/
+  .link1 {
+    font-size: var(--h4desktop);
+    text-decoration: underline 4px;
+  }
+
+  .pil {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  /**tema5**/
+  .h4_plus {
+    font-size: 4rem;
+  }
 
   /**footer**/
   .footer_punkter a {
