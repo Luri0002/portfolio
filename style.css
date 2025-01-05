@@ -89,8 +89,10 @@ header {
   text-decoration-thickness: 2px;
 }
 
-.aktiv {
-  color: var(--accent) !important;
+.menu a.aktiv {
+  text-decoration-color: var(--accent) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .burger {
@@ -305,14 +307,6 @@ footer {
 
 /****/
 
-/**media specifik til cirkel & h3**/
-@media (min-width: 600px) and (max-width: 750px) {
-  h3 {
-    font-size: 3.5rem !important; /**mellem queryen overskrev**/
-  }
-}
-/****************************/
-
 @media (min-width: 600px) {
   /**generelt**/
   h3 {
@@ -378,3 +372,11 @@ footer {
     height: auto;
   }
 }
+
+/**media specifik til cirkel & h3**/
+@media (min-width: 600px) and (max-width: 750px) {
+  h3 {
+    font-size: 3.5rem;
+  }
+}
+/****************************/
