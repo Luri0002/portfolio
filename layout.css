@@ -111,9 +111,9 @@ main {
 }
 
 h1 {
-  font-size: clamp(3rem, 19vw, 19rem);
+  font-size: clamp(3rem, 19vw, 19rem); /**dynamisk str, ideelt 19% af vw**/
   text-align: center;
-  white-space: nowrap;
+  white-space: nowrap; /**intet break**/
   position: relative; /*For at kunne placere footer h2*/
   overflow: visible;
 }
@@ -125,7 +125,7 @@ h1 {
 .h2_relativt {
   position: absolute;
   bottom: 2.6em;
-  transform: translateX(-279.4%); /*her er % af elementets egen bredte */
+  transform: translateX(-279.4%); /*her er % af elementets egen bredte på X aksen*/
 }
 
 /* .pseudo_p {
@@ -709,6 +709,11 @@ footer {
     grid-row: 6 !important;
     margin-top: 0 !important;
   }
+
+  .lottie {
+    grid-column: 1 / span 4 !important;
+    align-self: flex-end !important; /**bunden af portrættet**/
+  }
 }
 /****************************/
 
@@ -771,6 +776,7 @@ footer {
   .lottie {
     grid-column: 3 / span 4;
     grid-row: 1;
+    align-self: center; /**centrere til portræt**/
   }
 
   .underoverskrift {
@@ -1206,6 +1212,5 @@ footer {
 
   .lottie {
     scale: 1.2;
-    align-self: center; /**centrere til portræt**/
   }
 }

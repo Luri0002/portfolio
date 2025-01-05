@@ -89,6 +89,10 @@ header {
   text-decoration-thickness: 2px;
 }
 
+.aktiv {
+  color: var(--accent) !important;
+}
+
 .burger {
   width: 20px;
   height: 20px;
@@ -134,7 +138,7 @@ h1 {
 }
 
 .h2_relativt {
-  font-size: 0.35em;
+  font-size: 0.35em; /**35% af h1'eren**/
   color: var(--secondary);
 }
 
@@ -191,8 +195,8 @@ p {
 /** projekter **/
 .item_nummer {
   font-size: 6.5vw;
-  font-family: "futura-pt-bold", sans-serif;
-  font-weight: 700;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
   font-style: normal;
   color: var(--accent);
 }
