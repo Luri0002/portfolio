@@ -89,7 +89,7 @@ nav {
     top: 75px;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 70;
   }
 
   nav.active .menu li {
@@ -98,34 +98,58 @@ nav {
 }
 
 /**generelt**/
-main {
+/* body {
+  max-width: 1440px;
+  margin-inline: auto;
+} */
+
+/* footer {
+  max-width: none !important;
+} */
+
+/* main,
+header {
   max-width: 1400px;
   margin-inline: auto;
-  margin-left: 0.9rem;
-  margin-right: 0.9rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+} */
+
+.indhold {
+  position: relative;
+  overflow: visible;
+  max-width: 1400px;
+  margin-inline: auto;
+  /* padding-left: 0.9rem;
+  padding-right: 0.9rem; */
 }
 
-.margin_ekstra {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+/* main {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+} */
+
+.padding_ekstra {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 h1 {
-  font-size: clamp(3rem, 19vw, 19rem); /**dynamisk str, ideelt 19% af vw**/
+  font-size: clamp(3rem, 19vw, 17rem); /**dynamisk str, ideelt 19% af vw**/
   text-align: center;
   white-space: nowrap; /**intet break**/
   position: relative; /*For at kunne placere footer h2*/
   overflow: visible;
 }
 
-.marginh1 {
-  margin-top: 9rem;
-}
-
 .h2_relativt {
   position: absolute;
   bottom: 2.6em;
   transform: translateX(-279.4%); /*her er % af elementets egen bredte på X aksen*/
+}
+
+.marginh1 {
+  padding-top: 7rem;
 }
 
 /* .pseudo_p {
@@ -142,9 +166,9 @@ h1 {
   top: 0;
 } */
 
-/* h4 {
-  margin-bottom: 0.5rem;
-} */
+h4 {
+  padding-bottom: 1rem;
+}
 
 /* p {
   margin-bottom: 7rem;
@@ -156,10 +180,14 @@ h1 {
   width: 11%;
   height: auto;
   position: sticky;
-  top: 46%;
-  left: 8%;
-  z-index: 1000;
+  top: 41%;
+  left: 6%;
+  z-index: 40;
   /* display: none; */
+}
+
+.cirkel_stop {
+  margin-bottom: 2rem;
 }
 
 .grid_1-1 {
@@ -168,22 +196,23 @@ h1 {
 }
 
 .CTA {
-  margin-bottom: 14rem;
-  margin-top: 1rem;
+  grid-column: 2;
+  padding-bottom: 14rem;
+  padding-top: 1rem;
 }
 
 /** projekter **/
-.margin_projekter {
-  margin-left: 3.5rem;
-  margin-right: 3.5rem;
+.padding_projekter {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .galleri {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
 }
 
 .item {
@@ -207,15 +236,15 @@ h1 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: auto; /** indholdets højde**/
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 /*****************************************************/
 /**om mig**/
 .portraert {
   grid-column: 5 / span 6;
   grid-row: 1;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   max-width: 300px; /** for at det ikke bliver for stort**/
   height: auto;
   justify-self: center; /**når det ikke følger med kolonnerne længere **/
@@ -229,18 +258,20 @@ h1 {
 .underoverskrift {
   grid-column: 1 / span 4;
   grid-row: 3;
+  z-index: 60;
 }
 
 .tekst {
   grid-column: 3 / span 8;
   grid-row: 4;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .cv {
   grid-column: 1 / span 3;
   grid-row: 5;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  z-index: 60;
 }
 
 .style {
@@ -252,19 +283,20 @@ h1 {
 .kompetencer {
   grid-column: 3 / span 8;
   grid-row: 7;
-  margin-top: 0;
+  padding-top: 0;
 }
 /**temaside 3**/
 .underoverskrift1 {
   grid-column: 2 / span 4;
   grid-row: 1;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  z-index: 60;
 }
 
 .tekst1 {
   grid-column: 3 / span 7;
   grid-row: 2;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto1 {
@@ -275,13 +307,14 @@ h1 {
 .underoverskrift2 {
   grid-column: 2 / span 4;
   grid-row: 4;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst2 {
   grid-column: 3 / span 7;
   grid-row: 5;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto_full2 {
@@ -295,19 +328,20 @@ h1 {
 .underoverskrift3 {
   grid-column: 2 / span 4;
   grid-row: 7;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst3a {
   grid-column: 3 / span 7;
   grid-row: 8;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .tekst3b {
   grid-column: 3 / span 7;
   grid-row: 9;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto_full3 {
@@ -321,13 +355,14 @@ h1 {
 .underoverskrift4 {
   grid-column: 2 / span 4;
   grid-row: 11;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst4 {
   grid-column: 3 / span 7;
   grid-row: 12;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto_full4 {
@@ -341,18 +376,20 @@ h1 {
 .underoverskrift5 {
   grid-column: 2 / span 4;
   grid-row: 14;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  z-index: 60;
 }
 
 .tekst5 {
   grid-column: 3 / span 7;
   grid-row: 15;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .link1 {
   grid-column: 2 / span 3;
   grid-row: 16;
+  z-index: 60;
 }
 
 /**temaside 2**/
@@ -381,7 +418,7 @@ h1 {
 .tekst3_side4 {
   grid-column: 3 / span 7;
   grid-row: 8;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto3_side4 {
@@ -392,36 +429,39 @@ h1 {
 .underoverskrift4_side4 {
   grid-column: 2 / span 4;
   grid-row: 10;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst4_side4 {
   grid-column: 3 / span 7;
   grid-row: 11;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto4_side4 {
   grid-column: 1 / span 10;
   grid-row: 12;
-  margin: 0;
+  padding: 0;
 }
 
 .underoverskrift5_side4 {
   grid-column: 2 / span 4;
   grid-row: 13;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  z-index: 60;
 }
 
 .tekst5_side4 {
   grid-column: 3 / span 7;
   grid-row: 14;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .link1_side4 {
   grid-column: 2 / span 3;
   grid-row: 15;
+  z-index: 60;
 }
 
 /**temaside 5**/
@@ -433,13 +473,14 @@ h1 {
 .underoverskrift1_side5 {
   grid-column: 2 / span 4;
   grid-row: 2;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  z-index: 60;
 }
 
 .tekst1_side5 {
   grid-column: 3 / span 7;
   grid-row: 3;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto_full1_side5 {
@@ -453,13 +494,14 @@ h1 {
 .underoverskrift2_side5 {
   grid-column: 2 / span 4;
   grid-row: 5;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst2_side5 {
   grid-column: 3 / span 7;
   grid-row: 6;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto2_side5 {
@@ -470,13 +512,14 @@ h1 {
 .underoverskrift3_side5 {
   grid-column: 2 / span 4;
   grid-row: 8;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst3_side5 {
   grid-column: 3 / span 7;
   grid-row: 9;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .video {
@@ -490,36 +533,39 @@ h1 {
 .underoverskrift4_side5 {
   grid-column: 2 / span 4;
   grid-row: 11;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst4_side5 {
   grid-column: 3 / span 7;
   grid-row: 12;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .link1_side5 {
   grid-column: 2 / span 3;
   grid-row: 13;
+  z-index: 60;
 }
 /**virksomhedssite**/
 .h4_plus_2 {
   grid-column: 2 / span 5;
   grid-row: 14;
-  margin-top: 7rem;
+  padding-top: 7rem;
 }
 
 .underoverskrift5_side5 {
   grid-column: 2 / span 4;
   grid-row: 15;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  z-index: 60;
 }
 
 .tekst5_side5 {
   grid-column: 3 / span 7;
   grid-row: 16;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto5_side5 {
@@ -530,13 +576,14 @@ h1 {
 .underoverskrift6_side5 {
   grid-column: 2 / span 4;
   grid-row: 18;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst6_side5 {
   grid-column: 3 / span 7;
   grid-row: 19;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto6_side5 {
@@ -547,13 +594,14 @@ h1 {
 .underoverskrift7_side5 {
   grid-column: 2 / span 4;
   grid-row: 21;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst7_side5 {
   grid-column: 3 / span 7;
   grid-row: 22;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto7_side5 {
@@ -564,13 +612,14 @@ h1 {
 .underoverskrift8_side5 {
   grid-column: 2 / span 4;
   grid-row: 24;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst8_side5 {
   grid-column: 3 / span 7;
   grid-row: 25;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .foto_full8_side5 {
@@ -584,18 +633,20 @@ h1 {
 .underoverskrift9_side5 {
   grid-column: 2 / span 4;
   grid-row: 27;
-  margin-top: 3rem;
+  padding-top: 3rem;
+  z-index: 60;
 }
 
 .tekst9_side5 {
   grid-column: 3 / span 7;
   grid-row: 28;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .link2_side5 {
   grid-column: 2 / span 3;
   grid-row: 29;
+  z-index: 60;
 }
 
 /******/
@@ -603,32 +654,32 @@ h1 {
 /** om mig **/
 /**baggrunds diagram**/
 .style {
-  margin-bottom: 7rem;
+  padding-bottom: 7rem;
 }
 
 .tidslinje {
   position: relative;
-  margin-top: 2rem;
+  padding-top: 1rem;
 }
 
 .lodret_linje {
   position: absolute;
-  left: 87px;
-  top: -18px;
+  left: 76px;
+  top: -7px;
 }
 
 .event {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
 .year {
-  margin-right: 10px;
+  padding-right: 10px;
 }
 
 .linje {
-  margin-right: 10px;
+  padding-right: 10px;
 }
 /******/
 /**kompetence diagram**/
@@ -636,7 +687,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 7rem;
 }
 
 .kompetence {
@@ -658,11 +708,20 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  z-index: 60;
 }
 
 /** footer **/
 footer {
   padding-top: 4rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  z-index: 1;
+}
+
+.footer_container {
+  max-width: 1400px;
+  margin-inline: auto;
 }
 
 .footer_h2 {
@@ -675,7 +734,6 @@ footer {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  margin-top: 0.5rem;
 }
 
 .SoMe a {
@@ -686,8 +744,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  margin-top: 6rem;
-  padding-bottom: 8.5rem;
+  padding-top: 6rem;
+  padding-bottom: 5.5rem;
 }
 
 .footer_punkter {
@@ -702,40 +760,35 @@ footer {
 
 @media (min-width: 600px) {
   /**generelt**/
-  h3 {
-    margin-top: -5rem;
-  }
-
-  .margin_ekstra {
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
+  .padding_ekstra {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
   }
 
   /** forside **/
   .marginh1 {
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 
   .CTA {
-    margin-bottom: 9rem;
-    margin-top: 1rem;
+    padding-bottom: 9rem;
+    padding-top: 0;
   }
 
   .cirkel {
     top: 45%;
-    left: 8%;
   }
 
   /**projekter**/
-  .margin_projekter {
-    margin-left: 6rem;
-    margin-right: 6rem;
+  .padding_projekter {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .galleri {
     gap: 4rem;
-    margin-top: 2rem;
-    margin-bottom: 12rem;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
   }
 
   /** om mig **/
@@ -744,15 +797,15 @@ footer {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-auto-rows: auto;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
   }
   /*****************************************************/
   /**om mig**/
   .portraert {
     grid-column: 7 / span 4;
     grid-row: 1;
-    margin-bottom: 0;
+    padding-bottom: 0;
     justify-self: end;
   }
 
@@ -770,14 +823,14 @@ footer {
   .tekst {
     grid-column: 4 / span 6;
     grid-row: 3;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 
   .cv {
     grid-column: 2 / span 2;
     grid-row: 4;
-    margin-top: 0; /**fordi h3**/
-    margin-bottom: 0;
+    padding-top: 0; /**fordi h3**/
+    padding-bottom: 0;
   }
 
   .style {
@@ -788,20 +841,20 @@ footer {
   .kompetencer {
     grid-column: 3 / span 4;
     grid-row: 6;
-    margin-top: 0;
+    padding-top: 0;
   }
   /**temasiderne**/
   /**temaside 3**/
   .underoverskrift1 {
     grid-column: 5 / span 4;
     grid-row: 1;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
 
   .tekst1 {
     grid-column: 6 / span 5;
     grid-row: 2;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto1 {
@@ -812,13 +865,13 @@ footer {
   .underoverskrift2 {
     grid-column: 2 / span 4;
     grid-row: 4;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst2 {
     grid-column: 3 / span 5;
     grid-row: 5;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto_full2 {
@@ -832,19 +885,19 @@ footer {
   .underoverskrift3 {
     grid-column: 2 / span 4;
     grid-row: 7;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst3a {
     grid-column: 3 / span 5;
     grid-row: 8;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   .tekst3b {
     grid-column: 5 / span 5;
     grid-row: 9;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto_full3 {
@@ -858,13 +911,13 @@ footer {
   .underoverskrift4 {
     grid-column: 5 / span 4;
     grid-row: 11;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst4 {
     grid-column: 6 / span 5;
     grid-row: 12;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto_full4 {
@@ -878,19 +931,19 @@ footer {
   .underoverskrift5 {
     grid-column: 2 / span 4;
     grid-row: 14;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst5 {
     grid-column: 3 / span 5;
     grid-row: 15;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .link1 {
     grid-column: 2 / span 3;
     grid-row: 16;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
   /**temaside 2**/
   .foto3 {
@@ -918,7 +971,7 @@ footer {
   .tekst3_side4 {
     grid-column: 3 / span 5;
     grid-row: 8;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto3_side4 {
@@ -929,37 +982,37 @@ footer {
   .underoverskrift4_side4 {
     grid-column: 5 / span 4;
     grid-row: 10;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst4_side4 {
     grid-column: 6 / span 5;
     grid-row: 11;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto4_side4 {
     grid-column: 1 / span 5;
     grid-row: 12;
-    margin: 0;
+    padding: 0;
   }
 
   .underoverskrift5_side4 {
     grid-column: 5 / span 4;
     grid-row: 13;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst5_side4 {
     grid-column: 6 / span 5;
     grid-row: 14;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .link1_side4 {
     grid-column: 5 / span 3;
     grid-row: 15;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 
   /**temaside 5**/
@@ -971,13 +1024,13 @@ footer {
   .underoverskrift1_side5 {
     grid-column: 5 / span 4;
     grid-row: 2;
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 
   .tekst1_side5 {
     grid-column: 6 / span 5;
     grid-row: 3;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto_full1_side5 {
@@ -991,13 +1044,13 @@ footer {
   .underoverskrift2_side5 {
     grid-column: 2 / span 4;
     grid-row: 5;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst2_side5 {
     grid-column: 3 / span 5;
     grid-row: 6;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto2_side5 {
@@ -1008,13 +1061,13 @@ footer {
   .underoverskrift3_side5 {
     grid-column: 2 / span 4;
     grid-row: 8;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst3_side5 {
     grid-column: 3 / span 5;
     grid-row: 9;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .video {
@@ -1025,13 +1078,13 @@ footer {
   .underoverskrift4_side5 {
     grid-column: 2 / span 4;
     grid-row: 11;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst4_side5 {
     grid-column: 3 / span 5;
     grid-row: 12;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .link1_side5 {
@@ -1042,19 +1095,19 @@ footer {
   .h4_plus_2 {
     grid-column: 5 / span 4;
     grid-row: 14;
-    margin-top: 5rem;
+    padding-top: 5rem;
   }
 
   .underoverskrift5_side5 {
     grid-column: 5 / span 4;
     grid-row: 15;
-    margin-top: 1rem;
+    padding-top: 1rem;
   }
 
   .tekst5_side5 {
     grid-column: 6 / span 5;
     grid-row: 16;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .foto5_side5 {
@@ -1065,13 +1118,13 @@ footer {
   .underoverskrift6_side5 {
     grid-column: 5 / span 4;
     grid-row: 18;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst6_side5 {
     grid-column: 6 / span 5;
     grid-row: 19;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto6_side5 {
@@ -1082,13 +1135,13 @@ footer {
   .underoverskrift7_side5 {
     grid-column: 2 / span 4;
     grid-row: 21;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst7_side5 {
     grid-column: 3 / span 5;
     grid-row: 22;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto7_side5 {
@@ -1099,13 +1152,13 @@ footer {
   .underoverskrift8_side5 {
     grid-column: 2 / span 4;
     grid-row: 24;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst8_side5 {
     grid-column: 3 / span 5;
     grid-row: 25;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
   }
 
   .foto_full8_side5 {
@@ -1119,34 +1172,34 @@ footer {
   .underoverskrift9_side5 {
     grid-column: 5 / span 4;
     grid-row: 27;
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .tekst9_side5 {
     grid-column: 6 / span 5;
     grid-row: 28;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .link2_side5 {
     grid-column: 5 / span 3;
     grid-row: 29;
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 
   /******/
   /**baggrunds diagram (om mig)**/
   .style {
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
 
   .tidslinje {
-    margin-top: 4rem;
+    padding-top: 4rem;
   }
 
   .lodret_linje {
     left: 111px;
-    top: -34px;
+    top: 23px;
   }
   /******/
 
@@ -1156,18 +1209,11 @@ footer {
   }
 
   .grid_1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
   }
 
   .footer_punkter {
     grid-column: 2;
-    grid-row: 3;
-  }
-
-  .kontakt {
-    grid-column: 3;
     grid-row: 3;
   }
 
@@ -1180,13 +1226,12 @@ footer {
 @media (min-width: 600px) and (max-width: 750px) {
   .cirkel {
     top: 35%;
-    left: 8%;
   }
 
   .kompetencer {
     grid-column: 4 / span 6;
     grid-row: 6;
-    margin-top: 0;
+    padding-top: 0;
   }
 
   .lottie {
@@ -1198,25 +1243,31 @@ footer {
 
 /**mediaq til store skærme**/
 @media (min-width: 1200px) {
+  /**generelt**/
+  h3 {
+    margin: -5rem;
+  }
+
   /**forside**/
   .cirkel {
-    top: 60%;
-    left: 8%;
+    top: 56%;
   }
 
   /**projekter**/
   .galleri {
     gap: 6rem;
+    padding-top: 7rem;
+    padding-bottom: 15rem;
   }
 
-  .margin_projekter {
-    margin-left: 12rem;
-    margin-right: 12rem;
+  .padding_projekter {
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 
   /**om mig**/
-  .margin_ekstra {
-    margin-left: 12rem;
-    margin-right: 12rem;
+  .padding_ekstra {
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 }

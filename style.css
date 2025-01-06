@@ -78,7 +78,7 @@ header {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: var(--pmobil);
+  font-size: var(--pdesktop);
   transition: 0.3s;
 }
 
@@ -225,7 +225,7 @@ p {
 
 .lodret_linje {
   width: 2px;
-  height: 168%;
+  height: 159%;
   background-color: var(--primary);
 }
 
@@ -265,8 +265,8 @@ p {
   color: var(--accent);
   font-size: 2rem;
 }
-/** footer **/
 
+/** footer **/
 footer {
   background-color: var(--primary);
 }
@@ -323,7 +323,7 @@ footer {
 
   /** forside **/
   .CTA {
-    font-size: var(--pdesktop);
+    font-size: 1.5rem;
   }
 
   /****** om mig ********/
@@ -334,7 +334,7 @@ footer {
 
   .lodret_linje {
     width: 3px;
-    height: 189%;
+    height: 138%;
   }
 
   .linje {
@@ -380,3 +380,9 @@ footer {
   }
 }
 /****************************/
+
+@media (min-width: 1200px) {
+  .CTA {
+    font-size: 2rem;
+  }
+}
