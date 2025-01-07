@@ -8,7 +8,6 @@ function burgerClick() {
   burger.classList.toggle("active");
   nav.classList.toggle("active");
 }
-
 //toggle add/remove classes nemt
 
 menu.addEventListener("click", menuClick);

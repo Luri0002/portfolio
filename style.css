@@ -6,14 +6,8 @@
   --accent: #ff6d00;
   --white: #f5f1e6;
 
-  /** font size **/
-  /* --h1mobil: 2rem;
-  --h1desktop: 2.5rem;
-
-  --h2mobil: 1.75rem;
-  --h2desktop: 2rem; */
-
-  --h3mobil: 2.5rem;
+  /**font sizes**/
+  --h3mobil: 2.3rem;
   --h3desktop: 5rem;
 
   --h4mobil: 1.8rem;
@@ -24,15 +18,6 @@
 
   --minitekstmobil: 1rem;
   --minitekstdesktop: 1.1rem;
-
-  /*** space ***/
-  --space-xxs: 0.25rem;
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
-  --space-xxl: 6rem;
 }
 
 /** adobe skrifttyper 
@@ -122,7 +107,7 @@ header {
   }
 }
 
-/** generelt **/
+/************* generelt **************/
 img {
   width: 100%;
   height: auto;
@@ -143,10 +128,6 @@ h1 {
   font-size: 0.35em; /**35% af h1'eren**/
   color: var(--secondary);
 }
-
-/* .pseudo_p::after {
-  background-color: var(--accent);
-}  */
 
 h3 {
   font-family: "futura-pt", sans-serif;
@@ -180,11 +161,7 @@ p {
   color: var(--accent);
 }
 
-#accent {
-  background-color: var(--accent);
-}
-
-/** forside **/
+/************* forside ****************/
 .CTA {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -194,7 +171,7 @@ p {
   font-size: var(--minitekstmobil);
 }
 
-/** projekter **/
+/*********** projekter ****************/
 .item_nummer {
   font-size: 6.5vw;
   font-family: "futura-pt", sans-serif;
@@ -213,8 +190,9 @@ p {
   transform: scale(1.1);
 }
 
-/****** om mig ********/
-/**baggrunds diagram**/
+/************ om mig ***************/
+
+/** baggrunds diagram **/
 .style {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -223,9 +201,13 @@ p {
   color: var(--primary);
 }
 
+#accent {
+  background-color: var(--accent);
+}
+
 .lodret_linje {
   width: 2px;
-  height: 159%;
+  height: 120%;
   background-color: var(--primary);
 }
 
@@ -234,8 +216,8 @@ p {
   height: 2px;
   background-color: var(--primary);
 }
-/********/
-/**tema**/
+
+/************* temaer ****************/
 .link1 {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -250,23 +232,23 @@ p {
   color: var(--accent);
 }
 
-.link1:hover .pil {
-  transform: scale(1.2);
-}
-
 .pil {
   width: 2rem;
   height: auto;
   transition: 0.5s;
 }
 
-/**tema5**/
+.link1:hover .pil {
+  transform: scale(1.2);
+}
+
+/************* tema 5 ***************/
 .h4_plus {
   color: var(--accent);
   font-size: 2rem;
 }
 
-/** footer **/
+/************* footer ****************/
 footer {
   background-color: var(--primary);
 }
@@ -292,7 +274,7 @@ footer {
 .footer_punkter a:hover {
   color: var(--accent);
   font-weight: bold;
-  text-decoration: underline; /** line-through ? **/
+  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
@@ -305,10 +287,10 @@ footer {
   height: auto;
 }
 
-/****/
+/**********************************/
 
 @media (min-width: 600px) {
-  /**generelt**/
+  /******** generelt ***********/
   h3 {
     font-size: var(--h3desktop);
   }
@@ -321,28 +303,27 @@ footer {
     font-size: var(--pdesktop);
   }
 
-  /** forside **/
+  /********** forside ***********/
   .CTA {
     font-size: 1.5rem;
   }
 
-  /****** om mig ********/
-  /**baggrunds diagram**/
+  /********** om mig ***********/
+  /** baggrunds diagram **/
   .style {
     font-size: var(--pdesktop);
   }
 
   .lodret_linje {
     width: 3px;
-    height: 138%;
   }
 
   .linje {
     width: 176px;
     height: 3px;
   }
-  /********/
-  /**tema**/
+
+  /********** tema ***********/
   .link1 {
     font-size: var(--h4desktop);
     text-decoration: underline 4px;
@@ -353,12 +334,12 @@ footer {
     height: auto;
   }
 
-  /**tema5**/
+  /********* tema 5 *********/
   .h4_plus {
     font-size: 4rem;
   }
 
-  /**footer**/
+  /******** footer **********/
   .footer_punkter a {
     font-size: var(--pdesktop);
   }
@@ -373,14 +354,14 @@ footer {
   }
 }
 
-/**media specifik til cirkel & h3**/
+/** overlappende media til finjusteringer **/
 @media (min-width: 600px) and (max-width: 750px) {
   h3 {
     font-size: 3.5rem;
   }
 }
-/****************************/
 
+/****** store skærme *******/
 @media (min-width: 1200px) {
   .CTA {
     font-size: 2rem;
