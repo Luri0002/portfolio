@@ -110,17 +110,17 @@ nav {
 }
 
 h1 {
-  font-size: clamp(3rem, 19vw, 17rem); /**dynamisk str, ideelt 19% af vw**/
+  font-size: clamp(3rem, 19vw, 17rem); /**dynamisk str**/
   text-align: center;
   white-space: nowrap; /** - break **/
-  position: relative; /*For at kunne placere footer h2*/
+  position: relative; /*For h2*/
   overflow: visible;
 }
 
 .h2_relativt {
   position: absolute;
-  bottom: 2.6em;
-  transform: translateX(-279.4%); /*her er % af elementets egen bredte på X aksen*/
+  bottom: 2.6em; /*bottom af h1*/
+  transform: translateX(-279.4%); /* % af elementets egen bredte på X aksen */
 }
 
 .marginh1 {
@@ -138,7 +138,6 @@ h4 {
   top: 42%;
   left: 6%;
   z-index: 40;
-  /* display: none; */
 }
 
 .cirkel_stop {
@@ -275,7 +274,7 @@ h4 {
   grid-row: 6;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
-  width: 100vw; /* Fyld viewportens bredde */
+  width: 100vw;
 }
 
 .underoverskrift3 {

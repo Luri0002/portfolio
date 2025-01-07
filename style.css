@@ -70,7 +70,7 @@ header {
 .menu a:hover {
   color: var(--accent);
   font-weight: bold;
-  text-decoration: underline; /** line-through ? **/
+  text-decoration: underline;
   text-decoration-thickness: 2px;
 }
 
@@ -125,7 +125,7 @@ h1 {
 }
 
 .h2_relativt {
-  font-size: 0.35em; /**35% af h1'eren**/
+  font-size: 0.35em; /**35% af parent**/
   color: var(--secondary);
 }
 
